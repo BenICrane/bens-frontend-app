@@ -30,9 +30,13 @@ h1 {
 
 .player-input label {
     color: #00ff00;
+    text-align: center;
 }
 
 .player-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 30px; /* Increase space between player input fields */
 }
 
@@ -42,6 +46,8 @@ h1 {
     border: none;
     box-shadow: 0 0 8px #00ff00;
     font-family: 'Press Start 2P', sans-serif; /* Arcade font for input text */
+    width: 80%;
+    text-align: center;
     font-size: 16px; /* Adjust the size to be the same as the other arcade text */
     text-shadow: 0px 0px 8px #00ff00;
     caret-color: transparent; /* Hide the default caret */
