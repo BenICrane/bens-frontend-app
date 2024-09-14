@@ -21,6 +21,7 @@ h1 {
     color: #2c3e50;
 }
 .player-input {
+    font-family: 'Press Start 2P', sans-serif;
     margin-bottom: 15px;
 }
 .player-input label {
