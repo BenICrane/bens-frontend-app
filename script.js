@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
       playerScore.classList.add('player-score');
       playerScore.textContent = `${player.totalScore}`;
 
+      // Button container for Add Score and Powerup button
+      const buttonContainer = document.createElement('div');
+      buttonContainer.classList.add('button-container');
+
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
@@ -43,12 +47,15 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`${player.name} has the ${player.powerup} powerup!`);
       });
 
+      // Append buttons to button container
+      buttonContainer.appendChild(powerupButton);
+      buttonContainer.appendChild(addScoreButton);
+
       // Append everything to the player row
       playerRow.appendChild(playerName);
       playerRow.appendChild(playerScore);
       // playerRow.appendChild(scoreInput);
-      playerRow.appendChild(powerupButton);
-      playerRow.appendChild(addScoreButton);
+      playerRow.appendChild(buttonContainer);
 
       leaderboard.appendChild(playerRow); // Add player row to leaderboard
     });
