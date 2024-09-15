@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = '\u26F3'
+      addScoreButton.textContent = 'ADD SCORE \u26F3'
 
       // Powerup Button
       const powerupButton = document.createElement('button');
@@ -47,8 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
       playerRow.appendChild(playerName);
       playerRow.appendChild(playerScore);
       // playerRow.appendChild(scoreInput);
-      playerRow.appendChild(addScoreButton);
       playerRow.appendChild(powerupButton);
+      playerRow.appendChild(addScoreButton);
 
       leaderboard.appendChild(playerRow); // Add player row to leaderboard
     });
