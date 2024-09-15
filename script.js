@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   startGameButton.addEventListener('click', () => {
     // Capture the names from the input fields
-    const player1Name = player1Input.value || 'Player 1'; // Fallback to 'Player 1' if empty
-    const player2Name = player2Input.value || 'Player 2'; // Fallback to 'Player 2'
-    const player3Name = player3Input.value || 'Player 3'; // Fallback to 'Player 3'
-    const player4Name = player4Input.value || 'Player 4'; // Fallback to 'Player 4'
+    const player1Name = player1Input.value || 'P1'; // Fallback to 'Player 1' if empty
+    const player2Name = player2Input.value || 'P2'; // Fallback to 'Player 2'
+    const player3Name = player3Input.value || 'P3'; // Fallback to 'Player 3'
+    const player4Name = player4Input.value || 'P4'; // Fallback to 'Player 4'
 
     // Update players array with inputted names
     players[0].name = player1Name;
