@@ -4,6 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const gameScreen = document.getElementById('gameScreen');
   const leaderboard = document.getElementById('leaderboard');
 
+  // Select player input fields
+  const player1Input = document.getElementById('player1');
+  const player2Input = document.getElementById('player2');
+  const player3Input = document.getElementById('player3');
+  const player4Input = document.getElementById('player4');
+
   // Mock Data for now
   const players = [
     { name: 'A', totalScore: 13, powerup: 'Mulligan' },
