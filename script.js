@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Total Score
       const playerScore = document.createElement('span');
       playerScore.classList.add('player-score');
-      playerScore.textContent = `${player.totalScore}`pts;
+      playerScore.textContent = `${player.totalScore}pts`;
 
       // Button container for Add Score and Powerup button
       const buttonContainer = document.createElement('div');
