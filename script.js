@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for now
   const players = [
-    { name: 'Player 1', totalScore: 10, powerup: 'Mulligan' },
+    { name: 'Player 1', totalScore: 13, powerup: 'Mulligan' },
     { name: 'Player 2', totalScore: 12, powerup: 'Score Multiplier' },
     { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'Player 4', totalScore: 8, powerup: 'Score Shield' }
+    { name: 'Player 4', totalScore: 1, powerup: 'Score Shield' }
   ];
 
   // Function to render the leaderboard with mock player data
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Total Score
       const playerScore = document.createElement('span');
       playerScore.classList.add('player-score');
-      playerScore.textContent = `${player.totalScore}pts`;
+      playerScore.textContent = `${player.totalScore} pts`;
 
       // Button container for Add Score and Powerup button
       const buttonContainer = document.createElement('div');
