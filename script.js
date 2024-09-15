@@ -1,48 +1,80 @@
-#leaderboard {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 40px;
-}
+document.addEventListener('DOMContentLoaded', () => {
+  const startGameButton = document.getElementById('startGameButton');
+  const setupScreen = document.getElementById('setupScreen');
+  const gameScreen = document.getElementById('gameScreen');
+  const leaderboard = document.getElementById('leaderboard');
 
-.player-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00ff00;
-}
+  // Mock Data for now
+  const players = [
+    { name: 'Player 1', totalScore: 10, powerup: 'Mulligan' },
+    { name: 'Player 2', totalScore: 12, powerup: 'Score Multiplier' },
+    { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' }
+  ];
 
-.player-name, .player-score {
-    color: #00ff00;
-    text-shadow: 0px 0px 8px #00ff00;
-    font-size: 18px;
-}
+  // Function to render the leaderboard with mock player data
+  function renderLeaderboard(players) {
+    leaderboard.innerHTML = ''; // Clear previous content
 
-.score-input {
-    width: 60px;
-    padding: 5px;
-    font-size: 16px;
-    background-color: #000;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-    text-align: center;
-}
+    players.forEach(player => {
+      const playerRow = document.createElement('div');
+      playerRow.classList.add('player-row');
 
-.add-score-btn, .powerup-btn {
-    font-family: 'Press Start 2P', sans-serif;
-    padding: 10px;
-    background-color: #000;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+      // Player Name
+      const playerName = document.createElement('span');
+      playerName.classList.add('player-name');
+      playerName.textContent = player.name;
 
-.add-score-btn:hover, .powerup-btn:hover {
-    background-color: #00ff00;
-    color: #000;
-}
+      // Total Score
+      const playerScore = document.createElement('span');
+      playerScore.classList.add('player-score');
+      playerScore.textContent = `Total Score: ${player.totalScore}`;
+
+      // Score Input
+      const scoreInput = document.createElement('input');
+      scoreInput.type = 'number';
+      scoreInput.classList.add('score-input');
+      scoreInput.placeholder = 'Add strokes';
+
+      // Add Score Button
+      const addScoreButton = document.createElement('button');
+      addScoreButton.classList.add('add-score-btn');
+      addScoreButton.textContent = 'Add Score';
+      // Placeholder logic for adding score
+      addScoreButton.addEventListener('click', () => {
+        const addedScore = parseInt(scoreInput.value);
+        if (!isNaN(addedScore)) {
+          player.totalScore += addedScore;
+          playerScore.textContent = `Total Score: ${player.totalScore}`;
+          scoreInput.value = ''; // Reset input
+        }
+      });
+
+      // Powerup Button
+      const powerupButton = document.createElement('button');
+      powerupButton.classList.add('powerup-btn');
+      powerupButton.textContent = player.powerup;
+      // Placeholder logic for powerup button
+      powerupButton.addEventListener('click', () => {
+        alert(`${player.name} has the ${player.powerup} powerup!`);
+      });
+
+      // Append everything to the player row
+      playerRow.appendChild(playerName);
+      playerRow.appendChild(playerScore);
+      playerRow.appendChild(scoreInput);
+      playerRow.appendChild(addScoreButton);
+      playerRow.appendChild(powerupButton);
+
+      leaderboard.appendChild(playerRow); // Add player row to leaderboard
+    });
+  }
+
+  // Handle start game
+  startGameButton.addEventListener('click', () => {
+    setupScreen.style.display = 'none'; // Hide setup screen
+    gameScreen.style.display = 'block'; // Show game screen
+
+    renderLeaderboard(players); // Display the leaderboard with mock data
+  });
+});
+
