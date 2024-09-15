@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { name: 'Player 1', totalScore: 10, powerup: 'Mulligan' },
     { name: 'Player 2', totalScore: 12, powerup: 'Score Multiplier' },
     { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' }
+    { name: 'Player 4', totalScore: 8, powerup: 'Score Shield' }
   ];
 
   // Function to render the leaderboard with mock player data
