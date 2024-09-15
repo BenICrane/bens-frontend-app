@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for now
   const players = [
-    { name: 'Player 1', totalScore: 13, powerup: 'Mulligan' },
-    { name: 'Player 2', totalScore: 12, powerup: 'Score Multiplier' },
-    { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'Player 4', totalScore: 1, powerup: 'Score Shield' }
+    { name: 'Ben', totalScore: 13, powerup: 'Mulligan' },
+    { name: 'Matt', totalScore: 12, powerup: 'Score Multiplier' },
+    { name: 'Alex', totalScore: 8, powerup: 'Score Shield' },
+    { name: 'Doug', totalScore: 1, powerup: 'Score Shield' }
   ];
 
   // Function to sort players by score
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Player Position (Rank)
       const playerPosition = document.createElement('span');
       playerPosition.classList.add('player-position');
-      playerPosition.textContent = `${index + 1}`; // Position is the index + 1
+      playerPosition.textContent = `${index + 1})`; // Position is the index + 1
 
       // Player Name
       const playerName = document.createElement('span');
