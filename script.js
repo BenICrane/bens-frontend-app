@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for now
   const players = [
-    { name: 'Ben', totalScore: 13, powerup: 'Mulligan' },
-    { name: 'Matt', totalScore: 12, powerup: 'Score Multiplier' },
-    { name: 'Alex', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'Doug', totalScore: 1, powerup: 'Score Shield' }
+    { name: 'A', totalScore: 13, powerup: 'Mulligan' },
+    { name: 'B', totalScore: 12, powerup: 'Score Multiplier' },
+    { name: 'C', totalScore: 8, powerup: 'Score Shield' },
+    { name: 'D', totalScore: 1, powerup: 'Score Shield' }
   ];
 
   // Function to sort players by score
@@ -81,10 +81,25 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Handle start game
-  startGameButton.addEventListener('click', () => {
-    setupScreen.style.display = 'none'; // Hide setup screen
-    gameScreen.style.display = 'block'; // Show game screen
 
-    renderLeaderboard(players); // Display the leaderboard with mock data
+  startGameButton.addEventListener('click', () => {
+    // Capture the names from the input fields
+    const player1Name = player1Input.value || 'Player 1'; // Fallback to 'Player 1' if empty
+    const player2Name = player2Input.value || 'Player 2'; // Fallback to 'Player 2'
+    const player3Name = player3Input.value || 'Player 3'; // Fallback to 'Player 3'
+    const player4Name = player4Input.value || 'Player 4'; // Fallback to 'Player 4'
+
+    // Update players array with inputted names
+    players[0].name = player1Name;
+    players[1].name = player2Name;
+    players[2].name = player3Name;
+    players[3].name = player4Name;
+
+    // Hide setup screen and show game screen
+    setupScreen.style.display = 'none';
+    gameScreen.style.display = 'block';
+
+    // Render the leaderboard with updated player names
+    renderLeaderboard(players);
   });
 });
