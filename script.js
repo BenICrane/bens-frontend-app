@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Append everything to the player row
       playerRow.appendChild(playerName);
       playerRow.appendChild(playerScore);
-      playerRow.appendChild(scoreInput);
+      // playerRow.appendChild(scoreInput);
       playerRow.appendChild(addScoreButton);
       playerRow.appendChild(powerupButton);
 
