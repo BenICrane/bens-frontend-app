@@ -159,3 +159,10 @@ h1 {
     background-color: #00ff00;
     color: #000;
 }
+
+/* Flexbox container for buttons */
+.button-container {
+    display: flex;
+    gap: 20px; /* Increase space between the Add Score and Powerup buttons */
+}
+
