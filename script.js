@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sort players by score before rendering
     const sortedPlayers = sortPlayersByScore(players);
 
-    sortedPlayers.forEach(player => {
+    sortedPlayers.forEach((player, index) => {
       const playerRow = document.createElement('div');
       playerRow.classList.add('player-row');
 
