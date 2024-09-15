@@ -27,18 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
       // Total Score
       const playerScore = document.createElement('span');
       playerScore.classList.add('player-score');
-      playerScore.textContent = `Total Score: ${player.totalScore}`;
+      playerScore.textContent = `${player.totalScore}`;
 
       // Score Input
-      const scoreInput = document.createElement('input');
-      scoreInput.type = 'number';
-      scoreInput.classList.add('score-input');
-      scoreInput.placeholder = 'Add strokes';
+      // const scoreInput = document.createElement('input');
+      // scoreInput.type = 'number';
+      // scoreInput.classList.add('score-input');
+      // scoreInput.placeholder = 'Add strokes';
 
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = 'Add Score';
+      addScoreButton.textContent = '&#x26F3';
       // Placeholder logic for adding score
       addScoreButton.addEventListener('click', () => {
         const addedScore = parseInt(scoreInput.value);
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Powerup Button
       const powerupButton = document.createElement('button');
       powerupButton.classList.add('powerup-btn');
-      powerupButton.textContent = player.powerup;
+      powerupButton.textContent = '&#x2753';
       // Placeholder logic for powerup button
       powerupButton.addEventListener('click', () => {
         alert(`${player.name} has the ${player.powerup} powerup!`);
