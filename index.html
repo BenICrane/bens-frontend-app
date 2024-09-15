@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="styles.css"> <!-- Assuming styles.css is linked for styling -->
 </head>
 <body>
-    <div class="container">
-        <h1>SUPER SCRAMBLE</h1>
+    <div class="container" id="setupScreen">
+        <h1>SILLY STABLES</h1>
         <div id="player-inputs">
             <div class="player-input">
                 <label for="player1">Player 1:</label>
@@ -28,7 +28,15 @@
             </div>
         </div>
         <div class="start-game">
-            <button id="startGameButton" disabled>PLAY</buton>
+            <button id="startGameButton">PLAY</button>
+        </div>
+    </div>
+
+    <!-- New Game Screen (Hidden by default) -->
+    <div class="container" id="gameScreen" style="display:none;">
+        <h1>SILLY STABLES</h1>
+        <div id="leaderboard">
+            <!-- Player rows will be dynamically inserted here -->
         </div>
     </div>
 
