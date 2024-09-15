@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for now
   const players = [
-    { name: 'Player 1', totalScore: 13, powerup: 'Mulligan' },
-    { name: 'Player 2', totalScore: 12, powerup: 'Score Multiplier' },
-    { name: 'Player 3', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'Player 4', totalScore: 1, powerup: 'Score Shield' }
+    { name: 'Ben', totalScore: 13, powerup: 'Mulligan' },
+    { name: 'Matt', totalScore: 12, powerup: 'Score Multiplier' },
+    { name: 'Alex', totalScore: 8, powerup: 'Score Shield' },
+    { name: 'Doug', totalScore: 1, powerup: 'Score Shield' }
   ];
 
   // Function to sort players by score
@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sort players by score before rendering
     const sortedPlayers = sortPlayersByScore(players);
 
-    sortedPlayers.forEach((player, index) => {
+    sortedPlayers.forEach((player, index) => { // Added index here
       const playerRow = document.createElement('div');
       playerRow.classList.add('player-row');
 
       // Player Position (Rank)
       const playerPosition = document.createElement('span');
       playerPosition.classList.add('player-position');
-      playerPosition.textContent = `${index + 1}`; // Position is the index + 1
+      playerPosition.textContent = `${index + 1})`; // Position is the index + 1
 
       // Player Name
       const playerName = document.createElement('span');
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = 'ADD SCORE \u26F3'
-      / Add logic to increase score and re-render leaderboard
+      addScoreButton.textContent = 'ADD SCORE \u26F3';
+      // Add logic to increase score and re-render leaderboard
       addScoreButton.addEventListener('click', () => {
         player.totalScore += 1; // Increase score by 1 (or modify as needed)
         renderLeaderboard(players); // Re-render leaderboard after score change
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonContainer.appendChild(addScoreButton);
 
       // Append everything to the player row
-      playerRow.appendChild(playerPosition);
+      playerRow.appendChild(playerPosition); // Add position to row
       playerRow.appendChild(playerName);
       playerRow.appendChild(playerScore);
       playerRow.appendChild(buttonContainer);
@@ -88,4 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderLeaderboard(players); // Display the leaderboard with mock data
   });
 });
-
