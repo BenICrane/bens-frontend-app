@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Sort players by score before rendering
     const sortedPlayers = sortPlayersByScore(players);
 
-    sortedPlayers.forEach((player, index) => {
+    sortedPlayers.forEach((player, index) => { // Added index here
       const playerRow = document.createElement('div');
       playerRow.classList.add('player-row');
 
@@ -50,8 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = 'ADD SCORE \u26F3'
-      / Add logic to increase score and re-render leaderboard
+      addScoreButton.textContent = 'ADD SCORE \u26F3';
+      // Add logic to increase score and re-render leaderboard
       addScoreButton.addEventListener('click', () => {
         player.totalScore += 1; // Increase score by 1 (or modify as needed)
         renderLeaderboard(players); // Re-render leaderboard after score change
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonContainer.appendChild(addScoreButton);
 
       // Append everything to the player row
-      playerRow.appendChild(playerPosition);
+      playerRow.appendChild(playerPosition); // Add position to row
       playerRow.appendChild(playerName);
       playerRow.appendChild(playerScore);
       playerRow.appendChild(buttonContainer);
@@ -88,4 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
     renderLeaderboard(players); // Display the leaderboard with mock data
   });
 });
-
