@@ -32,12 +32,12 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = '&#x26F3'
+      addScoreButton.textContent = '\u26F3'
 
       // Powerup Button
       const powerupButton = document.createElement('button');
       powerupButton.classList.add('powerup-btn');
-      powerupButton.textContent = '&#x2753';
+      powerupButton.textContent = '\u2753';
       // Placeholder logic for powerup button
       powerupButton.addEventListener('click', () => {
         alert(`${player.name} has the ${player.powerup} powerup!`);
