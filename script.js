@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Mock Data for now
   const players = [
-    { name: 'A', totalScore: 13, powerup: 'Mulligan' },
-    { name: 'B', totalScore: 12, powerup: 'Score Multiplier' },
-    { name: 'C', totalScore: 8, powerup: 'Score Shield' },
-    { name: 'D', totalScore: 1, powerup: 'Score Shield' }
+    { name: 'A', totalScore: 0, powerup: 'Mulligan' },
+    { name: 'B', totalScore: 0, powerup: 'Score Multiplier' },
+    { name: 'C', totalScore: 0, powerup: 'Score Shield' },
+    { name: 'D', totalScore: 0, powerup: 'Score Shield' }
   ];
 
   // Function to sort players by score
