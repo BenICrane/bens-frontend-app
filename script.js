@@ -97,7 +97,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
       // Append buttons to button container
-      buttonContainer.appendChild(powerupButton);
       buttonContainer.appendChild(addScoreButton);
 
       // Append everything to the player row
