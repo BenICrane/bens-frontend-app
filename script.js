@@ -94,6 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       buttonContainer.appendChild(powerupButton); // Append powerup button
+    } else {
+      // Add an empty space to keep alignment if no powerup
+      const emptySpace = document.createElement('span');
+      emptySpace.classList.add('empty-space');
+      buttonContainer.appendChild(emptySpace);
     }
 
       // Append buttons to button container
