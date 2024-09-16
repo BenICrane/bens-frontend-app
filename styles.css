@@ -200,7 +200,7 @@ h1 {
 
 .score-buttons {
   display: grid;
-  font-family: 'Press Start 2P', sans-serif  
+  font-family: 'Press Start 2P', sans-serif;  
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   margin: 20px 0;
@@ -213,7 +213,7 @@ h1 {
   font-size: 16px;
   border: 2px solid #00ff00;
   cursor: pointer;
-  transition: background-color 0.8s ease;
+  transition: background-color 0.5s ease;
 }
 
 .score-option:hover {
