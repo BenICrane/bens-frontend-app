@@ -91,13 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // handle score button 
   document.querySelectorAll('.score-option').forEach(button => {
-  button.addEventListener('click', (e) => {
-    const points = parseInt(e.target.getAttribute('data-points'));
-    currentPlayer.totalScore += points; // Add points to player's score
-    renderLeaderboard(players); // Re-render leaderboard
-    scoreModal.style.display = 'none'; // Close modal
+    button.addEventListener('click', (e) => {
+      const points = parseInt(e.target.getAttribute('data-points'));
+      if (currentPlayer) {
+        // Add a delay of 500ms before closing the modal and updating the leaderboard
+        setTimeout(() => {
+          currentPlayer.totalScore += points; // Update score
+          renderLeaderboard(players); // Re-render leaderboard
+          scoreModal.style.display = 'none'; // Close modal
+          modalOverlay.style.display = 'none'; // Hide overlay
+        }, 500); // 500 milliseconds delay
+      }
+    });
   });
-});
 
   // handle close modal button
   closeModalButton.addEventListener('click', () => {
