@@ -93,9 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.score-option').forEach(button => {
   button.addEventListener('click', (e) => {
     const points = parseInt(e.target.getAttribute('data-points'));
+    scoreModal.style.display = 'none'; // Close modal
     currentPlayer.totalScore += points; // Add points to player's score
     renderLeaderboard(players); // Re-render leaderboard
-    scoreModal.style.display = 'none'; // Close modal
   });
 });
 
