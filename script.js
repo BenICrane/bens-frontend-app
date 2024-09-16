@@ -12,6 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const player3Input = document.getElementById('player3');
   const player4Input = document.getElementById('player4');
 
+  // add powerups
+  const powerups = [
+  { name: 'Mulligan', emoji: '🔄', description: 'Redo your last shot.' },
+  { name: 'Score Multiplier', emoji: '✖️', description: 'Multiply your score by 2.' },
+  { name: 'Score Shield', emoji: '🛡️', description: 'Block an opponent\'s powerup.' }
+];
+
   // Mock Data for now
   const players = [
     { name: 'A', totalScore: 0, activePowerup: null },
