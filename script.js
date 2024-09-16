@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const setupScreen = document.getElementById('setupScreen');
   const gameScreen = document.getElementById('gameScreen');
   const leaderboard = document.getElementById('leaderboard');
+  const scoreModal = document.getElementById('scoreModal');
+  const closeModalButton = document.getElementById('closeModalButton');
 
   // Select player input fields
   const player1Input = document.getElementById('player1');
@@ -57,11 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
       addScoreButton.textContent = 'ADD SCORE \u26F3';
-      // Add logic to increase score and re-render leaderboard
+
       addScoreButton.addEventListener('click', () => {
-        player.totalScore += 1; // Increase score by 1 (or modify as needed)
-        renderLeaderboard(players); // Re-render leaderboard after score change
+      currentPlayer = player; // Store the current player reference
+      scoreModal.style.display = 'block'; // Show modal
       });
+
 
       // Powerup Button
       const powerupButton = document.createElement('button');
@@ -85,6 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
       leaderboard.appendChild(playerRow); // Add player row to leaderboard
     });
   }
+
+  // handle score button 
+  document.querySelectorAll('.score-option').forEach(button => {
+  button.addEventListener('click', (e) => {
+    const points = parseInt(e.target.getAttribute('data-points'));
+    currentPlayer.totalScore += points; // Add points to player's score
+    renderLeaderboard(players); // Re-render leaderboard
+    scoreModal.style.display = 'none'; // Close modal
+  });
+});
+
+  // handle close modal button
+  closeModalButton.addEventListener('click', () => {
+  scoreModal.style.display = 'none'; // Close modal without changing score
+});
 
   // Handle start game
 
