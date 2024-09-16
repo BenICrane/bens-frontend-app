@@ -199,8 +199,7 @@ h1 {
 }
 
 .score-buttons {
-  display: grid;
-  font-family: 'Press Start 2P', sans-serif;  
+  display: grid;  
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 15px;
   margin: 20px 0;
@@ -211,6 +210,7 @@ h1 {
   color: #00ff00;
   padding: 10px;
   font-size: 16px;
+  font-family: 'Press Start 2P', sans-serif;  
   border: 2px solid #00ff00;
   cursor: pointer;
   transition: background-color 0.5s ease;
