@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const powerupModal = document.getElementById('powerupModal');
   const powerupContent = document.getElementById('powerupContent');
   
-  powerupContent.innerHTML = `<h2>${powerup.emoji} ${powerup.name}</h2><p>${powerup.description}</p>`;
+  powerupContent.innerHTML = `<h2>${powerup.emoji} <p>${powerup.name}</p></h2><p>${powerup.description}</p>`;
   
   powerupModal.style.display = 'block';
   modalOverlay.style.display = 'block';
