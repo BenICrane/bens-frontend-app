@@ -145,7 +145,7 @@ h1 {
     text-align: center;
 }
 
-.add-score-btn, .powerup-btn {
+.add-score-btn {
     font-family: 'Press Start 2P', sans-serif;
     padding: 10px;
     background-color: #000;
@@ -280,4 +280,19 @@ h1 {
     display: inline-block; /* Ensure it takes up space */
 }
 
-
+/* Powerup Button */
+.powerup-btn {
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px;
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 60px; /* Ensure consistent width for alignment */
+    height: 40px; /* Ensure consistent height for alignment */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
