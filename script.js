@@ -25,6 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
     return players.sort((a, b) => b.totalScore - a.totalScore); // Sort descending by score
   }
 
+  // Function to assign a random powerup
+  function assignRandomPowerup(player) {
+    if (!player.activePowerup) { // If the player has no active powerup
+    const randomPowerup = powerups[Math.floor(Math.random() * powerups.length)];
+    player.activePowerup = randomPowerup;
+    }
+  }
+
   // Function to render the leaderboard with mock player data
   function renderLeaderboard(players) {
     leaderboard.innerHTML = ''; // Clear previous content
