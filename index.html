@@ -38,6 +38,22 @@
         <div id="leaderboard">
             <!-- Player rows will be dynamically inserted here -->
         </div>
+
+        <!-- Score Selection Modal (Hidden by default) -->
+    <div id="scoreModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2>SELECT SCORE</h2>
+        <div class="score-buttons">
+          <button class="score-option" data-points="0">Blob</button>
+          <button class="score-option" data-points="1">Bogey</button>
+          <button class="score-option" data-points="2">Par</button>
+          <button class="score-option" data-points="3">Birdie</button>
+          <button class="score-option" data-points="4">Eagle</button>
+          <button class="score-option" data-points="5">Albatross</button>
+        </div>
+        <button id="closeModalButton">Cancel</button>
+      </div>
+    </div>
     </div>
 
     <script src="script.js"></script> <!-- Link to the external JavaScript file -->
