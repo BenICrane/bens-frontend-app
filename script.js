@@ -103,6 +103,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const points = parseInt(e.target.getAttribute('data-points'));
     scoreModal.style.display = 'none'; // Close modal
     currentPlayer.totalScore += points; // Add points to player's score
+    if (points >= 2) { // Par or better
+        assignRandomPowerup(currentPlayer); // Assign powerup if applicable
+    }
     renderLeaderboard(players); // Re-render leaderboard
   });
 });
