@@ -166,3 +166,73 @@ h1 {
     gap: 20px; /* Increase space between the Add Score and Powerup buttons */
 }
 
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+  z-index: 999; /* Keep overlay behind modal but above other content */
+  display: none; /* Hidden by default */
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  background-color: #222;
+  border: 4px solid #00ff00;
+  box-shadow: 0 0 15px #00ff00;
+  padding: 30px;
+  z-index: 1000; /* Ensure it's on top of everything */
+  display: none; /* Hidden by default */
+}
+
+.modal-content {
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.score-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  margin: 20px 0;
+}
+
+.score-option {
+  background-color: #000;
+  color: #00ff00;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #00ff00;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.score-option:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
+#closeModalButton {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #00ff00;
+  font-family: 'Press Start 2P', sans-serif;
+  border: 2px solid #00ff00;
+  cursor: pointer;
+}
+
+#closeModalButton:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
+
