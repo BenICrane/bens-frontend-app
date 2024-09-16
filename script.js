@@ -128,6 +128,23 @@ document.addEventListener('DOMContentLoaded', () => {
   scoreModal.style.display = 'none'; // Close modal without changing score
 });
 
+  // Show Powerup Modal
+  function showPowerupModal(powerup) {
+  const powerupModal = document.getElementById('powerupModal');
+  const powerupContent = document.getElementById('powerupContent');
+  
+  powerupContent.innerHTML = `<h2>${powerup.emoji} ${powerup.name}</h2><p>${powerup.description}</p>`;
+  
+  powerupModal.style.display = 'block';
+  modalOverlay.style.display = 'block';
+}
+
+// Close Powerup Modal
+  document.getElementById('closePowerupModal').addEventListener('click', () => {
+  document.getElementById('powerupModal').style.display = 'none';
+  modalOverlay.style.display = 'none';
+});
+  
   // Handle start game
 
   startGameButton.addEventListener('click', () => {
