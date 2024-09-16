@@ -82,13 +82,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
       // Powerup Button
+      // Powerup Button (Only visible if the player has a powerup)
+    if (player.activePowerup) {
       const powerupButton = document.createElement('button');
       powerupButton.classList.add('powerup-btn');
-      powerupButton.textContent = '\u2753';
-      // Placeholder logic for powerup button
+      powerupButton.textContent = player.activePowerup.emoji;
+      
+      // Show Powerup details on click
       powerupButton.addEventListener('click', () => {
-        alert(`${player.name} has the ${player.powerup} powerup!`);
+        showPowerupModal(player.activePowerup);
       });
+
+      buttonContainer.appendChild(powerupButton); // Append powerup button
+    }
 
       // Append buttons to button container
       buttonContainer.appendChild(powerupButton);
