@@ -273,5 +273,11 @@ h1 {
   color: #000;
 }
 
+/* Empty Space Placeholder */
+.empty-space {
+    width: 60px; /* Same width as the powerup button */
+    height: 40px; /* Same height as the powerup button */
+    display: inline-block; /* Ensure it takes up space */
+}
 
 
