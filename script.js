@@ -12,17 +12,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const player3Input = document.getElementById('player3');
   const player4Input = document.getElementById('player4');
 
+  // add powerups
+  const powerups = [
+  { name: 'Mulligan', emoji: '🔄', description: 'Redo your last shot.' },
+  { name: 'Score Multiplier', emoji: '✖️', description: 'Multiply your score by 2.' },
+  { name: 'Score Shield', emoji: '🛡️', description: 'Block an opponent\'s powerup.' }
+];
+
   // Mock Data for now
   const players = [
-    { name: 'A', totalScore: 0, powerup: 'Mulligan' },
-    { name: 'B', totalScore: 0, powerup: 'Score Multiplier' },
-    { name: 'C', totalScore: 0, powerup: 'Score Shield' },
-    { name: 'D', totalScore: 0, powerup: 'Score Shield' }
+    { name: 'A', totalScore: 0, activePowerup: null },
+    { name: 'B', totalScore: 0, activePowerup: null },
+    { name: 'C', totalScore: 0, activePowerup: null },
+    { name: 'D', totalScore: 0, activePowerup: null }
   ];
 
   // Function to sort players by score
   function sortPlayersByScore(players) {
     return players.sort((a, b) => b.totalScore - a.totalScore); // Sort descending by score
+  }
+
+  // Function to assign a random powerup
+  function assignRandomPowerup(player) {
+    if (!player.activePowerup) { // If the player has no active powerup
+    const randomPowerup = powerups[Math.floor(Math.random() * powerups.length)];
+    player.activePowerup = randomPowerup;
+    }
   }
 
   // Function to render the leaderboard with mock player data
@@ -67,16 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
       // Powerup Button
+      // Powerup Button (Only visible if the player has a powerup)
+    if (player.activePowerup) {
       const powerupButton = document.createElement('button');
       powerupButton.classList.add('powerup-btn');
-      powerupButton.textContent = '\u2753';
-      // Placeholder logic for powerup button
+      powerupButton.textContent = player.activePowerup.emoji;
+      
+      // Show Powerup details on click
       powerupButton.addEventListener('click', () => {
-        alert(`${player.name} has the ${player.powerup} powerup!`);
+        showPowerupModal(player.activePowerup);
       });
 
+      buttonContainer.appendChild(powerupButton); // Append powerup button
+    } else {
+      // Add an empty space to keep alignment if no powerup
+      const emptySpace = document.createElement('span');
+      emptySpace.classList.add('empty-space');
+      buttonContainer.appendChild(emptySpace);
+    }
+
       // Append buttons to button container
-      buttonContainer.appendChild(powerupButton);
       buttonContainer.appendChild(addScoreButton);
 
       // Append everything to the player row
@@ -95,6 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const points = parseInt(e.target.getAttribute('data-points'));
     scoreModal.style.display = 'none'; // Close modal
     currentPlayer.totalScore += points; // Add points to player's score
+    if (points >= 2) { // Par or better
+        assignRandomPowerup(currentPlayer); // Assign powerup if applicable
+    }
     renderLeaderboard(players); // Re-render leaderboard
   });
 });
@@ -104,6 +132,23 @@ document.addEventListener('DOMContentLoaded', () => {
   scoreModal.style.display = 'none'; // Close modal without changing score
 });
 
+  // Show Powerup Modal
+  function showPowerupModal(powerup) {
+  const powerupModal = document.getElementById('powerupModal');
+  const powerupContent = document.getElementById('powerupContent');
+  
+  powerupContent.innerHTML = `<h2>${powerup.emoji} <p>${powerup.name}</p></h2><p>${powerup.description}</p>`;
+  
+  powerupModal.style.display = 'block';
+  modalOverlay.style.display = 'block';
+}
+
+// Close Powerup Modal
+  document.getElementById('closePowerupModal').addEventListener('click', () => {
+  document.getElementById('powerupModal').style.display = 'none';
+  modalOverlay.style.display = 'none';
+});
+  
   // Handle start game
 
   startGameButton.addEventListener('click', () => {
