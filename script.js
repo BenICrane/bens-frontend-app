@@ -14,10 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // add powerups
   const powerups = [
-  { name: 'Mulligan', emoji: '🔄', description: 'Redo your last shot.' },
-  { name: 'Score Multiplier', emoji: '✖️', description: 'Multiply your score by 2.' },
-  { name: 'Score Shield', emoji: '🛡️', description: 'Block an opponent\'s powerup.' }
+  { name: 'Bombs away', emoji: '💣', description: 'Use your driver without taking a stroke' },
+  { name: 'Tap it in', emoji: '🏒', description: 'Use your putter without taking a stroke' },
+  { name: 'Seven is heaven', emoji: '7️⃣', description: 'Use your 7 iron without taking a stroke' },
+  { name: 'Footwedge', emoji: '🥾', description: 'Kick your ball once' },
+  { name: 'Mulligan', emoji: '🔁', description: 'Retake your shot, or make another player retake theirs!' },
+  { name: 'Swapsies', emoji: '🧑‍🤝‍🧑', description: 'Swap positions with your nearest player' },
+  { name: 'Teeball', emoji: '👕', description: 'Tee your ball up wherever you are on the course' },
+  { name: 'King of the (sand)castle', emoji: '👑', description: 'Move the leading player to their nearest bunker' },
+  { name: 'Bunker break', emoji: '🏖️', description: 'Take a free shot from a bunker' },
+  { name: 'Ladies room', emoji: '👵', description: 'Take your tee shot from the ladies\' tee' },
+  { name: 'Tag team', emoji: '🤝', description: 'Choose a partner at the start of a hole, both take the best score between the two of you' },
+  { name: 'Back on the road', emoji: '🛣️', description: 'Move your ball back to the fairway (you cannot move closer to the hole)' }
 ];
+
 
   // Mock Data for now
   const players = [
