@@ -318,11 +318,11 @@ h1 {
 } 
 
 /* Adjustments for mobile devices */
-@media (max-width: 20px) {
+@media (max-width: 600px) {
     .container {
         margin: 20px auto;
         padding: 15px;
-        max-width: 100%; /* Allow full-width on mobile */
+        max-width: 60%; /* Allow full-width on mobile */
     }
 
     h1 {
