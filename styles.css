@@ -315,4 +315,106 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 28px; 
-}   
+} 
+
+/* Adjustments for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+        max-width: 100%; /* Allow full-width on mobile */
+    }
+
+    h1 {
+        font-size: 24px; /* Smaller font for mobile */
+        margin-bottom: 20px;
+    }
+
+    .player-input input {
+        width: 100%; /* Full-width inputs on mobile */
+        font-size: 14px; /* Slightly smaller font */
+    }
+
+    .player-row {
+        flex-direction: column; /* Stack player rows vertically */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .player-name, .player-score {
+        font-size: 16px; /* Reduce font size for better fit */
+    }
+
+    .add-score-btn {
+        width: 100%; /* Full-width buttons */
+        font-size: 14px; /* Adjust button font size for mobile */
+    }
+
+    .modal {
+        width: 90%; /* Make the modal fill most of the screen */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .modal-buttons {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+        gap: 10px;
+    }
+
+    button {
+        width: 100%; /* Full-width buttons on mobile */
+        padding: 15px; /* Larger touch area */
+    }
+}
+
+/* Adjustments for tablet devices */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .container {
+        margin: 50px auto;
+        padding: 20px;
+        max-width: 90%; /* Slightly reduce width on tablets */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .player-input input {
+        width: 80%; /* Wider inputs */
+        font-size: 16px;
+    }
+
+    .add-score-btn {
+        width: auto; /* Allow buttons to adjust width */
+        font-size: 16px;
+    }
+}
+
+/* Continue base styles for larger screens */
+h1 {
+    text-align: center;
+    color: #00ff00;
+    text-shadow: 0px 0px 10px #00ff00;
+    margin-bottom: 40px;
+}
+
+.player-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+    border: 2px solid #00ff00;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+button {
+    font-family: 'Press Start 2P', sans-serif;
+    padding: 10px;
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
