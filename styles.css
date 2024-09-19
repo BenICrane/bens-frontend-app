@@ -269,9 +269,6 @@ h1 {
   border: 2px solid #00ff00;
   cursor: pointer;
   border-radius: 8px;
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
   text-align: centre;      
 }
 
