@@ -336,7 +336,7 @@ h1 {
     }
 
     .player-input label {
-    font-size: 8px;  /* Adjust the font size */
+    font-size: 8px !important;  /* Adjust the font size */
     color: #00ff00;   /* Customize the color */
     text-shadow: 0px 0px 8px #00ff00;  /* Optional: Add shadow */
     }
