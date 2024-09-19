@@ -318,7 +318,7 @@ h1 {
 } 
 
 /* Adjustments for mobile devices */
-@media (max-width: 400px) {
+@media (max-width: 20px) {
     .container {
         margin: 20px auto;
         padding: 15px;
