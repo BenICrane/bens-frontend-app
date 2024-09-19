@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Show Powerup details on click
       powerupButton.addEventListener('click', () => {
-        showPowerupModal(player.activePowerup);
+        showPowerupModal(player.activePowerup, player);
       });
 
       buttonContainer.appendChild(powerupButton); // Append powerup button
