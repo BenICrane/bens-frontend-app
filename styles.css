@@ -322,7 +322,7 @@ h1 {
     .container {
         margin: 20px auto;
         padding: 15px;
-        max-width: 60%; /* Allow full-width on mobile */
+        width: 60%; /* Allow full-width on mobile */
     }
 
     h1 {
