@@ -253,7 +253,7 @@ h1 {
   display: none; /* Hidden by default */
 }
 
-#closePowerupModal {
+#usePowerupButton, #closePowerupModal {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #000;
@@ -268,7 +268,7 @@ h1 {
   text-align: centre;      
 }
 
-#closePowerupModal:hover {
+#usePowerupButton:hover, #closePowerupModal:hover {
   background-color: #00ff00;
   color: #000;
 }
