@@ -319,6 +319,14 @@ h1 {
 
 /* Adjustments for mobile devices */
 @media (max-width: 600px) {
+    /* Ensure html and body take up 100% height */
+    html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    }
+
+    
     .container {
         margin: 20px auto;
         padding: 15px;
