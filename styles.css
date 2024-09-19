@@ -317,120 +317,44 @@ h1 {
     font-size: 28px; 
 } 
 
-/* Adjustments for mobile devices */
-@media (max-width: 600px) {
-    /* Ensure html and body take up 100% height */
-    html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    }
-
-    
-    .container {
-        margin: 20px auto;
-        padding: 15px;
-        width: 60%; /* Allow full-width on mobile */
-        height: 80%;
-    }
-
-    h1 {
-        font-size: 24px; /* Smaller font for mobile */
-        margin-bottom: 20px;
-    }
-
-    .player-input input {
-        width: 100%; /* Full-width inputs on mobile */
-        font-size: 8px; /* Slightly smaller font */
-    }
-
-    .player-input label {
-    font-size: 8px !important;  /* Adjust the font size */
-    color: #00ff00;   /* Customize the color */
-    text-shadow: 0px 0px 8px #00ff00;  /* Optional: Add shadow */
-    }
-
-
-    .player-row {
-        flex-direction: column; /* Stack player rows vertically */
-        align-items: flex-start;
-        padding: 10px;
-    }
-
-    .player-name, .player-score {
-        font-size: 16px; /* Reduce font size for better fit */
-    }
-
-    .add-score-btn {
-        width: 100%; /* Full-width buttons */
-        font-size: 14px; /* Adjust button font size for mobile */
-    }
-
-    .modal {
-        width: 90%; /* Make the modal fill most of the screen */
-        padding: 20px; /* Reduce padding for smaller screens */
-    }
-
-    .modal-buttons {
-        flex-direction: column; /* Stack buttons vertically on mobile */
-        gap: 10px;
-    }
-
-    button {
-        width: 100%; /* Full-width buttons on mobile */
-        padding: 15px; /* Larger touch area */
-    }
-}
-
-/* Adjustments for tablet devices */
-@media (min-width: 600px) and (max-width: 1024px) {
-    .container {
-        margin: 50px auto;
-        padding: 20px;
-        max-width: 90%; /* Slightly reduce width on tablets */
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    .player-input input {
-        width: 80%; /* Wider inputs */
-        font-size: 16px;
-    }
-
-    .add-score-btn {
-        width: auto; /* Allow buttons to adjust width */
-        font-size: 16px;
-    }
-}
-
-/* Continue base styles for larger screens */
-h1 {
-    text-align: center;
-    color: #00ff00;
-    text-shadow: 0px 0px 10px #00ff00;
-    margin-bottom: 40px;
-}
-
-.player-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/* Landscape Mode for Small Screens (max-width: 800px) */
+@media (max-width: 800px) and (orientation: landscape) {
+  .container {
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
     padding: 10px;
-    background-color: #333;
-    border: 2px solid #00ff00;
-    border-radius: 8px;
-    box-shadow: 0 0 10px #00ff00;
-}
+    flex-direction: row;  /* Align items side by side in landscape mode */
+    justify-content: space-around;  /* Distribute items evenly */
+  }
 
-button {
-    font-family: 'Press Start 2P', sans-serif;
-    padding: 10px;
-    background-color: #000;
-    color: #00ff00;
-    border: 2px solid #00ff00;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
+  h1 {
+    font-size: 18px;  /* Smaller font size for landscape */
+    margin-bottom: 10px;
+  }
+
+  .player-input label {
+    font-size: 14px;  /* Adjust font size for labels */
+  }
+
+  button {
+    padding: 8px 16px;  /* Adjust button size for landscape */
+    font-size: 12px;  /* Smaller font for buttons */
+  }
+
+  .player-row {
+    flex-direction: column; /* Stack player elements in a column for compactness */
+    width: auto;  /* Auto width to fit landscape view */
+    margin-bottom: 10px;
+  }
+
+  .modal {
+    width: 90%;  /* Allow the modal to take up most of the screen width */
+    height: auto; /* Let modal height adjust to content */
+    padding: 20px;
+  }
+
+  .modal-buttons {
+    flex-direction: row;  /* Ensure buttons remain side by side */
+    justify-content: space-around;
+  }
 }
