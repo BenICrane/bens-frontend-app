@@ -153,6 +153,22 @@ document.addEventListener('DOMContentLoaded', () => {
   modalOverlay.style.display = 'block';
 }
 
+  // Handle using the powerup
+document.getElementById('usePowerupButton').addEventListener('click', () => {
+  if (currentPowerupPlayer) {
+    // Reset the player's active powerup to null after use
+    currentPowerupPlayer.activePowerup = null;
+
+    // Re-render the leaderboard to remove the powerup button
+    renderLeaderboard(players);
+
+    // Close the modal
+    document.getElementById('powerupModal').style.display = 'none';
+    modalOverlay.style.display = 'none';
+  }
+});
+
+
 // Close Powerup Modal
   document.getElementById('closePowerupModal').addEventListener('click', () => {
   document.getElementById('powerupModal').style.display = 'none';
