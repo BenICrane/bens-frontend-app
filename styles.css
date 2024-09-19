@@ -335,6 +335,13 @@ h1 {
         font-size: 8px; /* Slightly smaller font */
     }
 
+    .player-input label {
+    font-size: 24px;  /* Adjust the font size */
+    color: #00ff00;   /* Customize the color */
+    text-shadow: 0px 0px 8px #00ff00;  /* Optional: Add shadow */
+    }
+
+
     .player-row {
         flex-direction: column; /* Stack player rows vertically */
         align-items: flex-start;
