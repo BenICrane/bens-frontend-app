@@ -253,7 +253,22 @@ h1 {
   display: none; /* Hidden by default */
 }
 
-#closePowerupModal {
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Center both buttons */
+  gap: 20px; /* Space between the buttons */
+  margin-top: 20px;
+  width: 100%;  
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Center both buttons */
+  gap: 20px; /* Space between the buttons */
+  margin-top: 20px;
+}
+
+#usePowerupButton, #closePowerupModal {
   margin-top: 20px;
   padding: 10px 20px;
   background-color: #000;
@@ -262,13 +277,10 @@ h1 {
   border: 2px solid #00ff00;
   cursor: pointer;
   border-radius: 8px;
-  display: block; 
-  margin-left: auto;
-  margin-right: auto;
-  text-align: centre;      
+  text-align: centre;    
 }
 
-#closePowerupModal:hover {
+#usePowerupButton:hover, #closePowerupModal:hover {
   background-color: #00ff00;
   color: #000;
 }

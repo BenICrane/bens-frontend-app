@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
   { name: 'King of the (sand)castle', emoji: '👑', description: 'Move the leading player to their nearest bunker' },
   { name: 'Bunker break', emoji: '🏖️', description: 'Take a free shot from a bunker' },
   { name: 'Ladies room', emoji: '👵', description: 'Take your tee shot from the ladies\' tee' },
-  { name: 'Tag team', emoji: '🤝', description: 'Choose a partner at the start of a hole, both take the best score between the two of you' },
+  { name: 'Tag team', emoji: '🤝', description: 'Choose a partner at the start of a hole - both take the best score between the two of you' },
   { name: 'Back on the road', emoji: '🛣️', description: 'Move your ball back to the fairway (you cannot move closer to the hole)' }
 ];
 
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Show Powerup details on click
       powerupButton.addEventListener('click', () => {
-        showPowerupModal(player.activePowerup);
+        showPowerupModal(player.activePowerup, player);
       });
 
       buttonContainer.appendChild(powerupButton); // Append powerup button
@@ -143,15 +143,31 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
   // Show Powerup Modal
-  function showPowerupModal(powerup) {
+  function showPowerupModal(powerup, player) {
   const powerupModal = document.getElementById('powerupModal');
   const powerupContent = document.getElementById('powerupContent');
   
   powerupContent.innerHTML = `<h2>${powerup.emoji} <p>${powerup.name}</p></h2><p>${powerup.description}</p>`;
-  
+  currentPowerupPlayer = player;
   powerupModal.style.display = 'block';
   modalOverlay.style.display = 'block';
 }
+
+  // Handle using the powerup
+document.getElementById('usePowerupButton').addEventListener('click', () => {
+  if (currentPowerupPlayer) {
+    // Reset the player's active powerup to null after use
+    currentPowerupPlayer.activePowerup = null;
+
+    // Re-render the leaderboard to remove the powerup button
+    renderLeaderboard(players);
+
+    // Close the modal
+    document.getElementById('powerupModal').style.display = 'none';
+    modalOverlay.style.display = 'none';
+  }
+});
+
 
 // Close Powerup Modal
   document.getElementById('closePowerupModal').addEventListener('click', () => {
