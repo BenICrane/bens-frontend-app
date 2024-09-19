@@ -261,6 +261,13 @@ h1 {
   width: 100%;  
 }
 
+.modal-buttons {
+  display: flex;
+  justify-content: center; /* Center both buttons */
+  gap: 20px; /* Space between the buttons */
+  margin-top: 20px;
+}
+
 #usePowerupButton, #closePowerupModal {
   margin-top: 20px;
   padding: 10px 20px;
