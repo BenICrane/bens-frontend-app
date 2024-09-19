@@ -316,3 +316,85 @@ h1 {
     align-items: center;
     font-size: 28px; 
 }   
+
+/* Mobile Landscape (max-width: 800px) */
+@media (max-width: 800px) and (orientation: landscape) {
+  
+  /* Make the setup screen container fit the entire screen */
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Remove the max-width restriction */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+  }
+
+  /* Adjust the player input fields and labels for landscape */
+  .player-input {
+    flex-direction: row;
+    justify-content: space-between; /* Spread out the input and label */
+    width: 100%; /* Full width for each input row */
+    margin-bottom: 15px; /* Reduce margin between inputs */
+  }
+
+  .player-input input {
+    width: 50%; /* Adjust the input width for landscape */
+    font-size: 14px; /* Slightly smaller font for mobile landscape */
+  }
+
+  /* Adjust the leaderboard container for landscape */
+  #gameScreen {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* Allow scrolling if necessary */
+    padding: 10px;
+  }
+
+  /* Ensure player rows stay on a single line */
+  .player-row {
+    flex-direction: row; /* Make sure each row stays horizontal */
+    justify-content: space-between; /* Space elements in the row evenly */
+    padding: 5px;
+  }
+
+  /* Adjust the modals to take up a portion of the screen */
+  .modal {
+    width: 80vw; /* 80% of the viewport width */
+    max-width: 400px; /* Maximum width of the modal */
+    padding: 20px;
+  }
+
+  .modal-content {
+    font-size: 16px; /* Adjust text size for readability */
+  }
+
+  /* Button adjustments for modals */
+  .modal-buttons {
+    flex-direction: row;
+    justify-content: space-around; /* Ensure buttons are evenly spaced */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  #usePowerupButton, #closePowerupModal {
+    font-size: 14px; /* Slightly smaller buttons for landscape */
+    padding: 10px;
+  }
+
+  /* Score buttons adjustments */
+  .score-buttons {
+    grid-gap: 10px; /* Reduce the gap between score buttons */
+  }
+
+  .score-option {
+    font-size: 14px; /* Slightly smaller font for score options */
+    padding: 8px;
+  }
+
+  /* General button adjustments */
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
