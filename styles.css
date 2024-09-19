@@ -238,7 +238,7 @@ h1 {
   color: #000;
 }
 
-/* Modal Styles (reuse existing styles) */
+/* Modal Styles */
 #powerupModal {
   position: fixed;
   top: 50%;
@@ -250,26 +250,24 @@ h1 {
   box-shadow: 0 0 15px #00ff00;
   padding: 30px;
   z-index: 1000;
-  display: none; /* Hidden by default */
+  display: none;
 }
 
-.modal-buttons {
-  display: flex;
-  justify-content: center; /* Center both buttons */
-  gap: 20px; /* Space between the buttons */
-  margin-top: 20px;
-  width: 100%;  
+.modal-content {
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
 }
 
+/* Modal Buttons Container */
 .modal-buttons {
   display: flex;
-  justify-content: center; /* Center both buttons */
-  gap: 20px; /* Space between the buttons */
+  justify-content: center;  /* Horizontally center both buttons */
+  gap: 20px;  /* Space between the buttons */
   margin-top: 20px;
 }
 
+/* Buttons in the Modal */
 #usePowerupButton, #closePowerupModal {
-  margin-top: 20px;
   padding: 10px 20px;
   background-color: #000;
   color: #00ff00;
@@ -277,8 +275,17 @@ h1 {
   border: 2px solid #00ff00;
   cursor: pointer;
   border-radius: 8px;
-  text-align: centre;    
+  text-align: center;  /* Ensure the text is centered */
+  width: auto;  /* Ensure the buttons adjust their size */
+  flex: 0 0 auto;  /* Prevent buttons from stretching in the flexbox */
 }
+
+/* Button Hover Effect */
+#usePowerupButton:hover, #closePowerupModal:hover {
+  background-color: #00ff00;
+  color: #000;
+}
+
 
 #usePowerupButton:hover, #closePowerupModal:hover {
   background-color: #00ff00;
