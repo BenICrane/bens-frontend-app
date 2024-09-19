@@ -323,6 +323,7 @@ h1 {
         margin: 20px auto;
         padding: 15px;
         width: 60%; /* Allow full-width on mobile */
+        height: 80%;
     }
 
     h1 {
