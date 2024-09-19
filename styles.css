@@ -270,7 +270,10 @@ h1 {
   border: 2px solid #00ff00;
   cursor: pointer;
   border-radius: 8px;
-  text-align: centre;      
+  text-align: centre;  
+  margin: 0;
+  width: 0;  
+    
 }
 
 #usePowerupButton:hover, #closePowerupModal:hover {
