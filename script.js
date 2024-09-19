@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
   // Show Powerup Modal
-  function showPowerupModal(powerup) {
+  function showPowerupModal(powerup, player) {
   const powerupModal = document.getElementById('powerupModal');
   const powerupContent = document.getElementById('powerupContent');
   
