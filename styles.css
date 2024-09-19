@@ -258,6 +258,7 @@ h1 {
   justify-content: center; /* Center both buttons */
   gap: 20px; /* Space between the buttons */
   margin-top: 20px;
+  width: 100%;  
 }
 
 #usePowerupButton, #closePowerupModal {
