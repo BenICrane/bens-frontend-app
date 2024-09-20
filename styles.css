@@ -432,10 +432,10 @@ h1 {
 
   /* Make the container a square with a green border */
   .container {
-    width: 80vw; /* Set the width to 80% of the viewport width */
-    height: 80vw; /* Set the height to maintain the square shape */
-    max-width: 200px; /* Set a maximum width for larger devices */
-    max-height: 100px; /* Set a maximum height for larger devices */
+    width: auto; /* Set the width to 80% of the viewport width */
+    height: auto; /* Set the height to maintain the square shape */
+    /* commenting out - max-width: 200px;  Set a maximum width for larger devices */
+    /* commenting out - max-height: 100px;  Set a maximum height for larger devices */
     margin: auto; /* Center the square horizontally */
     padding: 10px; /* Adjust padding */
     background-color: #222;
