@@ -435,7 +435,7 @@ h1 {
     width: 80vw; /* Set the width to 80% of the viewport width */
     height: 80vw; /* Set the height to maintain the square shape */
     max-width: 200px; /* Set a maximum width for larger devices */
-    max-height: 200px; /* Set a maximum height for larger devices */
+    max-height: 100px; /* Set a maximum height for larger devices */
     margin: auto; /* Center the square horizontally */
     padding: 10px; /* Adjust padding */
     background-color: #222;
@@ -464,9 +464,9 @@ h1 {
     width: 80vw; /* Match the container width */
     height: 80vw; /* Match the container height */
     max-width: 200px; /* Max width */
-    max-height: 200px; /* Max height */
+    max-height: 100px; /* Max height */
     overflow-y: auto; /* Allow scrolling if necessary */
-    padding: 30px;
+    padding: 40px;
   }
 
   /* Ensure player rows stay on a single line */
