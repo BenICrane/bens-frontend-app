@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add Score Button
       const addScoreButton = document.createElement('button');
       addScoreButton.classList.add('add-score-btn');
-      addScoreButton.textContent = 'ADD SCORE \u26F3';
+      addScoreButton.textContent = '\u26F3';
 
       addScoreButton.addEventListener('click', () => {
       currentPlayer = player; // Store the current player reference
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const powerupModal = document.getElementById('powerupModal');
   const powerupContent = document.getElementById('powerupContent');
   
-  powerupContent.innerHTML = `<h2>${powerup.emoji} <p>${powerup.name}</p></h2><p>${powerup.description}</p>`;
+  powerupContent.innerHTML = `<${powerup.name}</h2><p>${powerup.description}</p>`;
   currentPowerupPlayer = player;
   powerupModal.style.display = 'block';
   modalOverlay.style.display = 'block';
