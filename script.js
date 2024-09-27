@@ -58,11 +58,18 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showFinishGameButton() {
+    const finishButtonContainer = document.createElement('div');
+    finishButtonContainer.classList.add('start-game'); // Use the same class as the start button container
+
     const finishButton = document.createElement('button');
     finishButton.id = 'finishGameButton';
     finishButton.textContent = 'Finish Game';
     finishButton.classList.add('start-game'); 
-    gameScreen.appendChild(finishButton);
+
+     // Append the button to the container
+    finishButtonContainer.appendChild(finishButton);
+
+    gameScreen.appendChild(finishButtonContainer);
 
     finishButton.addEventListener('click', () => {
       alert('Game Over! Show final results.');
