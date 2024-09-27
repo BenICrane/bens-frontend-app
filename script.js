@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkHoleCompletion() {
     if (players.every(player => player.hasRecordedScore)) {
       currentHole++;
+      players.forEach(player => player.hasRecordedScore = false);
       holeDisplay.textContent = `Hole: ${currentHole} / ${totalHoles}`;
       if (currentHole > totalHoles) {
       showFinishGameButton();
