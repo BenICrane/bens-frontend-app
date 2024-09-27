@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const leaderboard = document.getElementById('leaderboard');
   const scoreModal = document.getElementById('scoreModal');
   const closeModalButton = document.getElementById('closeModalButton');
+  const holeDisplay = document.getElementById('holeDisplay');
 
   // Select player input fields
   const player1Input = document.getElementById('player1');
@@ -41,6 +42,41 @@ document.addEventListener('DOMContentLoaded', () => {
   function sortPlayersByScore(players) {
     return players.sort((a, b) => b.totalScore - a.totalScore); // Sort descending by score
   }
+
+  let currentHole = 1;
+  const totalHoles = 6;
+
+  function checkHoleCompletion() {
+    if (players.every(player => player.hasRecordedScore)) {
+      currentHole++;
+      players.forEach(player => player.hasRecordedScore = false);
+      holeDisplay.textContent = `Hole: ${currentHole} / ${totalHoles}`;
+      if (currentHole === totalHoles) {
+      showFinishGameButton();
+      }
+    }
+  }
+
+  function showFinishGameButton() {
+    const finishButtonContainer = document.createElement('div');
+    finishButtonContainer.classList.add('start-game'); // Use the same class as the start button container
+
+    const finishButton = document.createElement('button');
+    finishButton.id = 'finishGameButton';
+    finishButton.textContent = 'Finish Game';
+    finishButton.classList.add('start-game'); 
+
+     // Append the button to the container
+    finishButtonContainer.appendChild(finishButton);
+
+    gameScreen.appendChild(finishButtonContainer);
+
+    finishButton.addEventListener('click', () => {
+      alert('Game Over! Show final results.');
+      // Additional logic for handling end of the game
+    });
+  }
+
 
   // Function to assign a random powerup
   function assignRandomPowerup(player) {
@@ -133,6 +169,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (points >= 2) { // Par or better
         assignRandomPowerup(currentPlayer); // Assign powerup if applicable
     }
+    currentPlayer.hasRecordedScore = true;
+    checkHoleCompletion();
     renderLeaderboard(players); // Re-render leaderboard
   });
 });
