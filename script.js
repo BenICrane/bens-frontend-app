@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const finishButton = document.createElement('button');
     finishButton.id = 'finishGameButton';
     finishButton.textContent = 'Finish Game';
-    document.body.appendChild(finishButton);
+    gamescreen.appendChild(finishButton);
 
     finishButton.addEventListener('click', () => {
       alert('Game Over! Show final results.');
