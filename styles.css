@@ -317,4 +317,46 @@ h1 {
     justify-content: center;
     align-items: center;
     font-size: 28px; 
-}   
+} 
+
+/* Landscape Mode for Small Screens (max-width: 800px) */
+@media (max-width: 800px) and (orientation: landscape) {
+  .container {
+    width: 100vw;  /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    padding: 10px;
+    flex-direction: row;  /* Align items side by side in landscape mode */
+    justify-content: space-around;  /* Distribute items evenly */
+  }
+
+  h1 {
+    font-size: 18px;  /* Smaller font size for landscape */
+    margin-bottom: 10px;
+  }
+
+  .player-input label {
+    font-size: 14px;  /* Adjust font size for labels */
+  }
+
+  button {
+    padding: 8px 16px;  /* Adjust button size for landscape */
+    font-size: 12px;  /* Smaller font for buttons */
+  }
+
+  .player-row {
+    flex-direction: column; /* Stack player elements in a column for compactness */
+    width: auto;  /* Auto width to fit landscape view */
+    margin-bottom: 10px;
+  }
+
+  .modal {
+    width: 90%;  /* Allow the modal to take up most of the screen width */
+    height: auto; /* Let modal height adjust to content */
+    padding: 20px;
+  }
+
+  .modal-buttons {
+    flex-direction: row;  /* Ensure buttons remain side by side */
+    justify-content: space-around;
+  }
+}
