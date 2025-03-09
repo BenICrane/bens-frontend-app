@@ -318,3 +318,196 @@ h1 {
     align-items: center;
     font-size: 28px; 
 }   
+
+/* Mobile Landscape (max-width: 800px) */
+@media (max-width: 800px) and (orientation: landscape) {
+
+    /* minimise text shadow 
+  body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: #1b1b1b;
+    color: #00ff00; /* Neon green text */
+    margin: 0;
+    padding: 0;
+    text-shadow: 0px 0px 1px #00ff00;
+}
+    
+    /* Make the setup screen container fit the entire screen */
+  .container {
+    width: 100vw;
+    height: 100vh;
+    padding: 10px; /* Reduce padding for smaller screens */
+    max-width: 100%; /* Remove the max-width restriction */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+  }
+
+  /* Adjust the player input fields and labels for landscape */
+  .player-input {
+    flex-direction: row;
+    justify-content: space-between; /* Spread out the input and label */
+    width: 100%; /* Full width for each input row */
+    margin-bottom: 15px; /* Reduce margin between inputs */
+  }
+
+  .player-input input {
+    width: 50%; /* Adjust the input width for landscape */
+    font-size: 14px; /* Slightly smaller font for mobile landscape */
+  }
+
+  /* Adjust the leaderboard container for landscape */
+  #gameScreen {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto; /* Allow scrolling if necessary */
+    padding: 10px;
+  }
+
+  /* Ensure player rows stay on a single line */
+  .player-row {
+    flex-direction: row; /* Make sure each row stays horizontal */
+    justify-content: space-between; /* Space elements in the row evenly */
+    padding: 5px;
+  }
+
+  /* Adjust the modals to take up a portion of the screen */
+  .modal {
+    width: 80vw; /* 80% of the viewport width */
+    max-width: 400px; /* Maximum width of the modal */
+    padding: 20px;
+  }
+
+  .modal-content {
+    font-size: 16px; /* Adjust text size for readability */
+  }
+
+  /* Button adjustments for modals */
+  .modal-buttons {
+    flex-direction: row;
+    justify-content: space-around; /* Ensure buttons are evenly spaced */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  #usePowerupButton, #closePowerupModal {
+    font-size: 14px; /* Slightly smaller buttons for landscape */
+    padding: 10px;
+  }
+
+  /* Score buttons adjustments */
+  .score-buttons {
+    grid-gap: 10px; /* Reduce the gap between score buttons */
+  }
+
+  .score-option {
+    font-size: 14px; /* Slightly smaller font for score options */
+    padding: 8px;
+  }
+
+  /* General button adjustments */
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Mobile portrait (max-width: 800px) */
+@media (max-width: 3000px){
+
+  /* Diagnostic Test: TEMPORARY background color to check if media query is applied */
+  body {
+    font-family: 'Press Start 2P', sans-serif;
+    background-color: red; /* TEMPORARY background for testing */
+    color: white; /* Neon green text */
+    margin: 0;
+    padding: 0;
+    text-shadow: 0px 0px 1px #00ff00;
+    font-size: 8px !important; /* Force 8px font */
+  }
+
+  /* Font sizing for all elements */
+  body, button, input, .player-input input, .player-name, .player-score, 
+  label, .player-input label, h1, h2, .modal-content, .score-option, 
+  .modal-buttons button, .powerup-btn, .player-row {
+    font-size: 8px !important; /* Force 8px font for all relevant elements */
+  }
+
+  /* Make the container smaller to fit */
+  .container {
+    width: 90vw; /* Set to 90% of the viewport width */
+    height: 90vh; /* Set to 90% of the viewport height */
+    max-width: 250px; /* Set max width for larger devices */
+    max-height: 250px; /* Set max height for larger devices */
+    margin: auto; /* Center the container */
+    padding: 10px;
+    background-color: #222;
+    border: 4px solid #00ff00; /* Green border */
+    box-shadow: 0 0 15px #00ff00;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Adjust the player input fields and labels */
+  .player-input {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; /* Full width for each input row */
+    margin-bottom: 10px; /* Reduce margin between inputs */
+  }
+
+  .player-input input {
+    width: 45%; /* Adjust input width */
+  }
+
+  /* Adjust the leaderboard container for portrait */
+  #gameScreen {
+    width: 90vw; /* Match the container width */
+    height: 90vh; /* Match the container height */
+    max-width: 250px; /* Max width */
+    max-height: 250px; /* Max height */
+    overflow-y: auto; /* Allow scrolling if necessary */
+    padding: 10px;
+  }
+
+  /* Ensure player rows stay on a single line */
+  .player-row {
+    flex-direction: row; /* Make sure each row stays horizontal */
+    justify-content: space-between; /* Space elements in the row evenly */
+    padding: 5px;
+  }
+
+  /* Adjust the modals to take up a portion of the screen */
+  .modal {
+    width: 90vw; /* 90% of the viewport width */
+    height: auto; /* Let the modal adjust height */
+    max-width: 250px; /* Max width of the modal */
+    padding: 20px;
+  }
+
+  /* Button adjustments for modals */
+  .modal-buttons {
+    flex-direction: row;
+    justify-content: space-around; /* Ensure buttons are evenly spaced */
+    gap: 10px; /* Reduce gap between buttons */
+  }
+
+  #usePowerupButton, #closePowerupModal {
+    padding: 10px;
+  }
+
+  /* Score buttons adjustments */
+  .score-buttons {
+    grid-gap: 10px; /* Reduce the gap between score buttons */
+  }
+
+  .score-option {
+    padding: 8px;
+  }
+
+  /* General button adjustments */
+  button {
+    padding: 6px 12px; /* More compact padding for portrait mode */
+  }
+}
